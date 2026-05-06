@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hotel Rayong Beach | Sawaddee Holland Rayong Guesthouse Thailand</title>
+<meta name="description" content="Guesthouse in Rayong op 200m van het strand. Kamers met airco, restaurant, bar en poolbiljart. Boek direct via WhatsApp.">
+<meta name="keywords" content="hotel Rayong, guesthouse Rayong, Rayong beach hotel, kamers Rayong, accommodatie Thailand">
+
+<style>
+body {margin:0;font-family:Arial;background:#f5f5f5;color:#333;}
+
+header {
+background:#0f4c5c;color:white;text-align:center;
+padding:15px;font-size:20px;
+}
+
+.lang {text-align:center;padding:10px;}
+.lang button {
+margin:5px;padding:8px 12px;border:none;
+border-radius:6px;background:#ddd;cursor:pointer;
+}
+
+.hero {position:relative;color:white;text-align:center;padding:140px 20px;}
+.hero::before {
+content:'';position:absolute;top:0;left:0;width:100%;height:100%;
+background:rgba(0,0,0,0.5);
+}
+.hero-content {position:relative;z-index:2;}
+.hero-logo {max-width:140px;margin-bottom:15px;}
+
+.btn {
+background:#ff7f11;color:white;padding:14px 24px;
+border-radius:8px;text-decoration:none;
+display:inline-block;margin:6px;font-weight:bold;
+}
+
+.section {padding:35px 20px;text-align:center;}
+.grid {display:grid;grid-template-columns:1fr 1fr;gap:15px;}
+
+.card {
+background:white;border-radius:12px;overflow:hidden;
+box-shadow:0 6px 15px rgba(0,0,0,0.12);
+}
+
+.card p {padding:15px;font-weight:bold;}
+
+.review {
+background:white;padding:15px;margin:10px;
+border-radius:10px;font-style:italic;
+}
+
+.slider, .room-slider, .rest-slider {
+position:relative;height:240px;overflow:hidden;border-radius:12px;
+}
+
+.hero .slider {
+position:absolute;top:0;left:0;width:100%;height:100%;
+border-radius:0;
+}
+
+.slide {
+position:absolute;width:100%;height:100%;
+object-fit:cover;opacity:0;transition:opacity 1s;
+}
+
+.slide.active {opacity:1;}
+
+.whatsapp {
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;
+padding:15px;border-radius:50%;
+font-size:22px;text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:999;
+}
+
+footer {
+background:#0f4c5c;color:white;
+text-align:center;padding:15px;margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>Sawaddee Holland Rayong</header>
+
+<div class="lang">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('nl')">NL</button>
+<button onclick="setLang('th')">ไทย</button>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+
+<div class="slider">
+<img class="slide active" src="beach1.jpg">
+<img class="slide" src="beach2.jpg">
+<img class="slide" src="beach3.jpg">
+</div>
+
+<div class="hero-content">
+<img src="logo.png" class="hero-logo">
+<h1 id="title"></h1>
+<p id="subtitle"></p>
+<p>⭐ 4.8 / 5 based on guest reviews</p>
+
+<a class="btn" href="https://wa.me/66811520624">📲 Book Now</a>
+<a class="btn" href="https://maps.google.com/?q=Sawaddee+Holland+Rayong">📍 Location</a>
+</div>
+
+</div>
+
+<!-- SEO TEKST -->
+<div class="section">
+<p>
+Looking for a hotel in Rayong near the beach?  
+Sawaddee Holland Rayong offers comfortable rooms, a relaxed atmosphere, restaurant, bar and pool table.  
+Perfect for tourists, couples and long stay guests in Thailand.
+</p>
+</div>
+
+<!-- ROOMS -->
+<div class="section">
+<h2 id="roomsTitle"></h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="room-slider">
+<img class="slide active" src="room1.jpg">
+<img class="slide" src="room1b.jpg">
+</div>
+<p id="room1"></p>
+</div>
+
+<div class="card">
+<div class="room-slider">
+<img class="slide active" src="room2.jpg">
+<img class="slide" src="room2b.jpg">
+</div>
+<p id="room2"></p>
+</div>
+
+</div>
+</div>
+
+<!-- RESTAURANT -->
+<div class="section">
+<h2 id="restTitle"></h2>
+
+<div class="rest-slider">
+<img class="slide active" src="restaurant.jpg">
+<img class="slide" src="bar.jpg">
+<img class="slide" src="food.jpg">
+</div>
+
+<p id="restText"></p>
+</div>
+
+<!-- REVIEWS -->
+<div class="section">
+<h2>Guest Reviews</h2>
+
+<div class="review">⭐️⭐️⭐️⭐️⭐️ "Amazing place, super friendly owners!"</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ "Perfect location, quiet and relaxing!"</div>
+
+<a class="btn" href="https://maps.google.com/?q=Sawaddee+Holland+Rayong">
+👉 Read all reviews on Google
+</a>
+</div>
+
+<!-- LOCATION -->
+<div class="section">
+<h2>Location</h2>
+
+<iframe 
+src="https://www.google.com/maps?q=3%20The%20Moment%20Villa%20Road%20Rayong&output=embed"
+width="100%" height="300" style="border:0;border-radius:10px;">
+</iframe>
+</div>
+
+<footer>© Sawaddee Holland Rayong</footer>
+
+<a class="whatsapp" href="https://wa.me/66811520624">💬</a>
+
+<script>
+function setLang(lang) {
+
+const data = {
+en: {
+title: "Your Tropical Escape in Rayong 🌴",
+subtitle: "Only 200m from the beach • Pool table • Restaurant & Bar",
+roomsTitle: "Rooms",
+room1: "🌿 Comfort Room (2 persons) - Airco • WiFi - From 1200 THB",
+room2: "🌴 Family Room (3 persons) - Spacious - From 1800 THB",
+restTitle: "Restaurant & Bar",
+restText: "🍹 Food, drinks & relaxed atmosphere"
+},
+nl: {
+title: "Jouw tropische verblijf in Rayong 🌴",
+subtitle: "200m van het strand • Poolbiljart • Restaurant & Bar",
+roomsTitle: "Kamers",
+room1: "🌿 Comfort kamer (2 personen) - Airco • WiFi - Vanaf 1200 THB",
+room2: "🌴 Familie kamer (3 personen) - Ruim - Vanaf 1800 THB",
+restTitle: "Restaurant & Bar",
+restText: "🍹 Eten, drinken en ontspannen sfeer"
+},
+th: {
+title: "ที่พักบรรยากาศดีในระยอง 🌴",
+subtitle: "ห่างจากทะเล 200 เมตร • โต๊ะพูล • ร้านอาหาร & บาร์",
+roomsTitle: "ห้องพัก",
+room1: "🌿 ห้อง 2 คน - แอร์ • WiFi - เริ่มต้น 1200 บาท",
+room2: "🌴 ห้อง 3 คน - กว้างขวาง - เริ่มต้น 1800 บาท",
+restTitle: "ร้านอาหาร & บาร์",
+restText: "🍹 อาหาร เครื่องดื่ม บรรยากาศสบายๆ"
+}
+};
+
+document.getElementById("title").innerText = data[lang].title;
+document.getElementById("subtitle").innerText = data[lang].subtitle;
+document.getElementById("roomsTitle").innerText = data[lang].roomsTitle;
+document.getElementById("room1").innerText = data[lang].room1;
+document.getElementById("room2").innerText = data[lang].room2;
+document.getElementById("restTitle").innerText = data[lang].restTitle;
+document.getElementById("restText").innerText = data[lang].restText;
+}
+setLang('en');
+</script>
+
+<script>
+function startSlider(selector) {
+document.querySelectorAll(selector).forEach(slider => {
+let slides = slider.querySelectorAll(".slide");
+let i = 0;
+
+setInterval(() => {
+slides.forEach(s => s.classList.remove("active"));
+slides[i].classList.add("active");
+i = (i + 1) % slides.length;
+}, 3000);
+});
+}
+
+startSlider(".slider");
+startSlider(".room-slider");
+startSlider(".rest-slider");
+</script>
+
+</body>
+</html>
