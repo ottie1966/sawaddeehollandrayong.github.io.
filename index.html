@@ -1,3 +1,16 @@
+<!-- GARDEN SLIDER -->
+
+<div class="section">
+
+<h2 id="gardenTitle"></h2>
+
+<div class="card">
+
+<img class="garden-slide active" src="garden1.jpg">
+<img class="garden-slide" src="garden2.jpg">
+<img class="garden-slide" src="outside.jpg">
+
+</div>
 https://chatgpt.com/s/HTML
 <!DOCTYPE html>
 <html lang="en">
@@ -146,7 +159,23 @@ object-fit:contain;
 background:black;
 border-radius:12px;
 }
+<!-- GARDEN SLIDER -->
 
+<div class="section">
+
+<h2 id="gardenTitle"></h2>
+
+<div class="card">
+
+<img class="garden-slide active" src="garden1.jpg">
+<img class="garden-slide" src="garden2.jpg">
+<img class="garden-slide" src="outside.jpg">
+
+</div>
+
+<p id="gardenText"></p>
+
+</div>
 .review{
 background:white;
 padding:15px;
@@ -240,7 +269,7 @@ Sawaddee Holland Rayong
 <p>⭐ 4.8 / 5 Guest Rating</p>
 
 <a class="btn" href="https://wa.me/66811520624">
-📲 Book Now
+💬 WhatsApp
 </a>
 
 <a class="btn" href="https://maps.google.com/?q=Sawaddee+Holland+Rayong">
@@ -275,12 +304,13 @@ Perfect for tourists, couples and long stay guests in Thailand.
 <div class="grid">
 
 <div class="card">
-<img src="room1.jpg">
+<img src="room1_main.jpg">
 <p id="room1"></p>
 </div>
 
 <div class="card">
-<img src="room2.jpg">
+<img class="room2-slide active" src="room2.jpg">
+<img class="room2-slide" src="room2_bathroom.jpg">
 <p id="room2"></p>
 </div>
 
@@ -304,7 +334,27 @@ Perfect for tourists, couples and long stay guests in Thailand.
 <p id="restText"></p>
 
 </div>
+<script>
+<!-- GARDEN SLIDER -->
 
+<div class="section">
+
+<h2 id="gardenTitle"></h2>
+
+<div class="card">
+
+<img class="garden-slide active" src="garden1.jpg">
+<img class="garden-slide" src="garden2.jpg">
+<img class="garden-slide" src="outside.jpg">
+
+</div>
+
+<p id="gardenText"></p>
+
+</div>
+
+
+</script>
 <!-- REVIEWS -->
 
 <div class="section">
@@ -418,6 +468,28 @@ slides[index].classList.add("active");
 },3000);
 
 </script>
+<script>
 
+function startSlider(className){
+let slides=document.querySelectorAll("." + className);
+let index=0;
+
+setInterval(()=>{
+slides.forEach(s=>s.style.display="none");
+index++;
+if(index>=slides.length){index=0;}
+slides[index].style.display="block";
+},3000);
+}
+
+// start sliders
+startSlider("room1-slide");
+startSlider("room2-slide");
+
+</script> 
+     
 </body>
 </html>
+<p id="gardenText"></p>
+
+</div>
