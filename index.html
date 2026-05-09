@@ -500,7 +500,31 @@ gardenSlides[gardenIndex].classList.add("active");
 function startSlider(className){
 let slides=document.querySelectorAll("." + className);
 let index=0;
+<script>
 
+function startSlider(className){
+let slides=document.querySelectorAll("." + className);
+let index=0;
+
+setInterval(()=>{
+
+slides.forEach(slide=>slide.classList.remove("active"));
+
+index++;
+if(index>=slides.length){
+index=0;
+}
+
+slides[index].classList.add("active");
+
+},3000);
+}
+
+// start beide sliders
+startSlider("room1-slide");
+startSlider("room2-slide");
+
+</script>
 setInterval(()=>{
 slides.forEach(s=>s.style.display="none");
 index++;
