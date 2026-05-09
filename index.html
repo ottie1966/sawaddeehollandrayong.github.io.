@@ -1,479 +1,109 @@
-https://chatgpt.com/s/HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hotel Rayong Beach | Sawaddee Holland Rayong</title>
-
-<meta name="description" content="Guesthouse in Rayong near the beach. Comfortable rooms, restaurant, bar and pool table. Book directly via WhatsApp.">
-
-<meta name="keywords" content="hotel Rayong, guesthouse Rayong, Rayong beach hotel, Thailand accommodation">
+<title>Sawaddee Holland Rayong</title>
 
 <style>
 
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f4f4f4;
-color:#333;
-}
+body{margin:0;font-family:Arial;background:#f4f4f4}
 
-header{
-background:#0f4c5c;
-color:white;
-padding:15px;
-text-align:center;
-font-size:24px;
-font-weight:bold;
-}
+header{background:#0f4c5c;color:#fff;padding:15px;text-align:center;font-size:24px}
 
-.lang{
-text-align:center;
-padding:10px;
-background:white;
-}
+.section{padding:40px 20px;text-align:center}
 
-.lang button{
-padding:10px 14px;
-margin:5px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-font-weight:bold;
-}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 
-.hero{
-position:relative;
-height:500px;
-overflow:hidden;
-}
+.card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.15)}
 
-.hero-slide{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-opacity:0;
-transition:1s;
-}
+.card img{width:100%;height:240px;object-fit:cover}
 
-.hero-slide.active{
-opacity:1;
-}
+.card p{padding:10px;font-weight:bold}
 
-.hero-overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.45);
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
-box-sizing:border-box;
-}
+.slider{position:relative;height:240px}
 
-.hero-content{
-max-width:700px;
-}
+.slide{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0;transition:0.5s}
 
-.logo{
-width:140px;
-margin-bottom:15px;
-}
+.slide.active{opacity:1}
 
-.btn{
-display:inline-block;
-padding:14px 22px;
-margin:8px;
-background:#ff7f11;
-color:white;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
-}
-
-.section{
-padding:40px 20px;
-text-align:center;
-}
-
-.section h2{
-margin-bottom:25px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-.card{
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 4px 12px rgba(0,0,0,0.15);
-}
-
-.card img{
-width:100%;
-height:260px;
-object-fit:contain;
-background:black;
-}
-
-.card p{
-padding:15px;
-font-weight:bold;
-}
-
-.restaurant-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
-}
-
-.restaurant-grid img{
-width:100%;
-height:280px;
-object-fit:contain;
-background:black;
-border-radius:12px;
-}
-<!-- GARDEN SLIDER -->
-
-<div class="section">
-
-<h2 id="gardenTitle"></h2>
-
-<div class="card">
-
-<img class="garden-slide active" src="garden1.jpg">
-<img class="garden-slide" src="garden2.jpg">
-<img class="garden-slide" src="outside.jpg">
-
-</div>
-
-<p id="gardenText"></p>
-
-</div>
-.review{
-background:white;
-padding:15px;
-margin:10px auto;
-border-radius:10px;
-max-width:600px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-iframe{
-border:0;
-border-radius:12px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:26px;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-z-index:999;
-}
-
-footer{
-background:#0f4c5c;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
-}
-
-@media(max-width:700px){
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.restaurant-grid{
-grid-template-columns:1fr;
-}
-
-.hero{
-height:420px;
-}
-
-.card img,
-.restaurant-grid img{
-height:220px;
-}
-
-}
+.btn{display:inline-block;padding:12px 20px;background:#ff7f11;color:#fff;border-radius:10px;text-decoration:none}
 
 </style>
 </head>
 
 <body>
 
-<header>
-Sawaddee Holland Rayong
-</header>
-
-<div class="lang">
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('nl')">NL</button>
-<button onclick="setLang('th')">ไทย</button>
-</div>
+<header>Sawaddee Holland Rayong</header>
 
 <!-- HERO -->
-
-<div class="hero">
-
-<img class="hero-slide active" src="beach1.jpg">
-<img class="hero-slide" src="beach2.jpg">
-<img class="hero-slide" src="beach3.jpg">
-
-<div class="hero-overlay">
-
-<div class="hero-content">
-
-<img src="logo.png" class="logo">
-
-<h1 id="title"></h1>
-
-<p id="subtitle"></p>
-
-<p>⭐ 4.8 / 5 Guest Rating</p>
-
-<a class="btn" href="https://wa.me/66811520624">
-💬 WhatsApp
-</a>
-
-<a class="btn" href="https://maps.google.com/?q=Sawaddee+Holland+Rayong">
-📍 Location
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- SEO TEXT -->
-
 <div class="section">
-
-<p>
-Looking for a hotel in Rayong near the beach?
-Sawaddee Holland Rayong offers comfortable rooms,
-restaurant, bar and pool table only 200m from the beach.
-Perfect for tourists, couples and long stay guests in Thailand.
-</p>
-
+<h1>🌴 Your Tropical Escape</h1>
+<a class="btn" href="https://wa.me/66811520624">💬 WhatsApp</a>
 </div>
 
 <!-- ROOMS -->
-
 <div class="section">
-
-<h2 id="roomsTitle"></h2>
+<h2>Rooms</h2>
 
 <div class="grid">
 
-<div class="card">
-<img src="room1_main.jpg">
-<p id="room1"></p>
+<!-- ROOM 1 -->
+<div class="card slider">
+<img class="slide room1 active" src="room1.jpg">
+<img class="slide room1" src="room1b.jpg">
+<img class="slide room1" src="bathroom.jpg">
+<p>🌿 Comfort Room • From 1200 THB</p>
 </div>
 
-<div class="card">
-<img class="room2-slide active" src="room2.jpg">
-<img class="room2-slide" src="room2_bathroom.jpg">
-<p id="room2"></p>
+<!-- ROOM 2 -->
+<div class="card slider">
+<img class="slide room2 active" src="room2.jpg">
+<img class="slide room2" src="room2b.jpg">
+<p>🌴 Family Room • From 1800 THB</p>
 </div>
 
 </div>
-
 </div>
 
 <!-- RESTAURANT -->
-
 <div class="section">
-
-<h2 id="restTitle"></h2>
-
-<div class="restaurant-grid">
-
+<h2>Restaurant & Bar</h2>
+<div class="grid">
 <img src="restaurant.jpg">
 <img src="bar.jpg">
-
+</div>
 </div>
 
-<p id="restText"></p>
-
-</div>
-<script>
-<!-- GARDEN SLIDER -->
-
+<!-- GARDEN -->
 <div class="section">
-
-<h2 id="gardenTitle"></h2>
+<h2>🌴 Outside & Garden</h2>
 
 <div class="card">
-
-<img class="garden-slide active" src="garden1.jpg">
-<img class="garden-slide" src="garden2.jpg">
-<img class="garden-slide" src="outside.jpg">
-
+<img src="garden.jpg">
+<p>Relax in our tropical garden near the beach</p>
 </div>
 
-<p id="gardenText"></p>
-
 </div>
-
-
-</script>
-<!-- REVIEWS -->
-
-<div class="section">
-
-<h2>Guest Reviews</h2>
-
-<div class="review">
-⭐️⭐️⭐️⭐️⭐️ "Amazing place and very friendly owners!"
-</div>
-
-<div class="review">
-⭐️⭐️⭐️⭐️⭐️ "Perfect location near the beach!"
-</div>
-
-<a class="btn" href="https://maps.google.com/?q=Sawaddee+Holland+Rayong">
-Read all Google Reviews
-</a>
-
-</div>
-
-<!-- LOCATION -->
-
-<div class="section">
-
-<h2>Location</h2>
-
-<iframe
-src="https://www.google.com/maps?q=Rayong&output=embed"
-width="100%"
-height="320">
-</iframe>
-
-</div>
-
-<footer>
-© Sawaddee Holland Rayong
-</footer>
-
-<a class="whatsapp" href="https://wa.me/66811520624">
-💬
-</a>
 
 <script>
 
-function setLang(lang){
-
-const data = {
-
-en:{
-title:"Your Tropical Escape in Rayong 🌴",
-subtitle:"200m from the beach • Pool table • Restaurant & Bar",
-roomsTitle:"Rooms",
-room1:"🌿 Comfort Room • Airco • WiFi • From 1200 THB",
-room2:"🌴 Family Room • Spacious • From 1800 THB",
-restTitle:"Restaurant & Bar",
-restText:"🍹 Food, drinks and relaxed atmosphere"
-},
-
-nl:{
-title:"Jouw tropische verblijf in Rayong 🌴",
-subtitle:"200m van het strand • Poolbiljart • Restaurant & Bar",
-roomsTitle:"Kamers",
-room1:"🌿 Comfort kamer • Airco • WiFi • Vanaf 1200 THB",
-room2:"🌴 Familie kamer • Ruim • Vanaf 1800 THB",
-restTitle:"Restaurant & Bar",
-restText:"🍹 Eten, drinken en ontspannen sfeer"
-},
-
-th:{
-title:"ที่พักบรรยากาศดีในระยอง 🌴",
-subtitle:"ห่างทะเล 200 เมตร • โต๊ะพูล • ร้านอาหาร & บาร์",
-roomsTitle:"ห้องพัก",
-room1:"🌿 ห้องพัก 2 คน • แอร์ • WiFi • เริ่มต้น 1200 บาท",
-room2:"🌴 ห้องครอบครัว • กว้างขวาง • เริ่มต้น 1800 บาท",
-restTitle:"ร้านอาหาร & บาร์",
-restText:"🍹 อาหาร เครื่องดื่ม และบรรยากาศสบายๆ"
-}
-
-};
-
-document.getElementById("title").innerText=data[lang].title;
-document.getElementById("subtitle").innerText=data[lang].subtitle;
-document.getElementById("roomsTitle").innerText=data[lang].roomsTitle;
-document.getElementById("room1").innerText=data[lang].room1;
-document.getElementById("room2").innerText=data[lang].room2;
-document.getElementById("restTitle").innerText=data[lang].restTitle;
-document.getElementById("restText").innerText=data[lang].restText;
-
-}
-
-setLang('en');
-
-</script>
-
-<script>
-
-let slides=document.querySelectorAll(".hero-slide");
-let index=0;
+function slider(name){
+let slides=document.querySelectorAll("."+name);
+let i=0;
 
 setInterval(()=>{
-
-slides.forEach(slide=>slide.classList.remove("active"));
-
-index++;
-if(index>=slides.length){
-index=0;
-}
-
-slides[index].classList.add("active");
-
-},3000);
-
-</script>
-<script>
-
-function startSlider(className){
-let slides=document.querySelectorAll("." + className);
-let index=0;
-
-setInterval(()=>{
-slides.forEach(s=>s.style.display="none");
-index++;
-if(index>=slides.length){index=0;}
-slides[index].style.display="block";
+slides.forEach(s=>s.classList.remove("active"));
+i=(i+1)%slides.length;
+slides[i].classList.add("active");
 },3000);
 }
 
-// start sliders
-startSlider("room1-slide");
-startSlider("room2-slide");
+slider("room1");
+slider("room2");
 
-</script> 
-     
+</script>
+
 </body>
 </html>
