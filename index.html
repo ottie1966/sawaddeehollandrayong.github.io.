@@ -135,24 +135,37 @@ text-decoration:none;
 <div class="section">
 
 <h2>Rooms</h2>
-<!-- COMFORT ROOM -->
+</body>
+</html>
 <div class="card">
-<div class="slider" id="comfortSlider">
-<img src="room1_main.jpg" class="active">
-<img src="room1_extra.jpg">
-</div>
-<p>🌿 Comfort Room • Airco • WiFi • From 1200 THB</p>
+  <img class="room1-slide" src="room1.jpg">
+  <img class="room1-slide" src="room1b.jpg"><script>
+function slider(cls){
+let s=document.querySelectorAll("."+cls);
+let i=0;
+
+if(s.length==0) return;
+
+s[i].style.display="block";
+
+setInterval(()=>{
+s[i].style.display="none";
+i=(i+1)%s.length;
+s[i].style.display="block";
+},3000);
+}
+
+slider("room1-slide");
+slider("room2-slide");
+</script>
+  
+  <p>Kamer 1</p>
 </div>
 
-<br>
-
-<!-- FAMILY ROOM -->
 <div class="card">
-<div class="slider" id="familySlider">
-<img src="room2_jpg" class="active">
-<img src="room2_bathroom.jpg">
-</div>
-<p>🌴 Family Room • Spacious • From 1800 THB</p>
+  <img class="room2-slide" src="room2.jpg">
+  <img class="room2-slide" src="room2b.jpg">
+  <p>Kamer 2</p>
 </div>
 
 </div>
@@ -247,35 +260,3 @@ startSlider("gardenSlider");
 
 </script>
 
-</body>
-</html>
-<div class="card">
-  <img class="room1-slide" src="room1.jpg">
-  <img class="room1-slide" src="room1b.jpg"><script>
-function slider(cls){
-let s=document.querySelectorAll("."+cls);
-let i=0;
-
-if(s.length==0) return;
-
-s[i].style.display="block";
-
-setInterval(()=>{
-s[i].style.display="none";
-i=(i+1)%s.length;
-s[i].style.display="block";
-},3000);
-}
-
-slider("room1-slide");
-slider("room2-slide");
-</script>
-  
-  <p>Kamer 1</p>
-</div>
-
-<div class="card">
-  <img class="room2-slide" src="room2.jpg">
-  <img class="room2-slide" src="room2b.jpg">
-  <p>Kamer 2</p>
-</div>
