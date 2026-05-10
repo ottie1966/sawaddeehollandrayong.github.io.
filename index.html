@@ -43,7 +43,7 @@ body{
   padding:20px;
 }
 
-.overlay img{
+.logo{
   width:120px;
   margin-bottom:10px;
 }
@@ -106,7 +106,7 @@ body{
   <img class="hero-slide" src="beach3.jpg">
 
   <div class="overlay">
-    <img src="logo.png">
+    <img src="logo.png" class="logo">
     <h2>Sawaddee Holland Rayong</h2>
     <p>Relaxed stay near the beach • Rooms • Bar • Pool table</p>
   </div>
@@ -146,6 +146,18 @@ body{
   </div>
 </div>
 
+<!-- GARDEN (FIXED) -->
+<div class="section">
+  <img class="garden active" src="garden1.jpg">
+  <img class="garden" src="garden2.jpg">
+  <img class="garden" src="outside.jpg">
+
+  <div class="text">
+    <h3>Garden</h3>
+    <p>Tropical relax area</p>
+  </div>
+</div>
+
 <!-- MAP -->
 <div class="section">
   <iframe 
@@ -157,7 +169,6 @@ body{
 <a class="whatsapp" href="https://wa.me/66811520624">💬</a>
 
 <script>
-// SIMPLE SLIDER (STABIEL)
 function slider(className){
   let slides = document.querySelectorAll("." + className);
   let i = 0;
@@ -174,6 +185,7 @@ slider("hero-slide");
 slider("room1");
 slider("room2");
 slider("bar");
+slider("garden");
 </script>
 
 </body>
